@@ -1,0 +1,110 @@
+Speaker 1 (00:00)
+On update. There is a retrieval. 
+
+Speaker 1 (00:23)
+Update auto pull record. Scroll down, scroll down. This is yeah, create first auto. 
+
+Speaker 1 (00:31)
+The purposeful record is there right here. There is no tricks. Technically, it's also doing the same. 
+
+Speaker 1 (00:42)
+But what it's doing is I think it's doing the same thing, but it's way over complicating it. All we need to do is just Put a dry catch and Put A. There is an existing logic where we go through and retrieve for 3 times can you scroll down on the update? 
+
+Speaker 1 (01:11)
+Project, there is an existing update logic Can you check it out? 
+
+Speaker 2 (01:39)
+On this one00. 
+
+Speaker 1 (01:42)
+Not update no the same auto pool record. There is an insert on auto pool right? There is an update on auto pool also. 
+
+Speaker 1 (01:56)
+Just search for update space. Or is there anything? 
+
+Speaker 3 (02:04)
+Access updates. 
+
+Speaker 1 (02:06)
+Let me also open up. 
+
+Speaker 3 (02:13)
+Excuse me, what is case of this right? 
+
+Speaker 1 (02:41)
+Rotate, the professor. 
+
+Speaker 1 (02:57)
+Ah, update only record. Yeah, yeah, search for that matter. I think a little bit about a little bit about. 
+
+Speaker 1 (03:11)
+Yes, that You see how they're doing it, they're doing. The second scenario on trackage Yes Very similar to this Exact same. Use case right now. 
+
+Speaker 1 (03:35)
+You see how they are doing, they are doing. An update and on 3 note, 7, if there is an exception that is happening, then on the catch, you take that. And you do the same operation. 
+
+Speaker 1 (03:53)
+Ok. You just copy exactly and line 318. Instead of how they are doing an update, they are recalling the same method in your scenario. 
+
+Speaker 1 (04:06)
+You will be calling the create again. 
+
+Speaker 2 (04:09)
+His Correct. 
+
+Speaker 1 (04:14)
+You get my point. 
+
+Speaker 2 (04:15)
+Ha, you see that? 
+
+Speaker 1 (04:18)
+So give it this a shot. I don't even think that you need acing logic in here. You can still go with synchronous, so you don't need this 319 on acing generation, logic or things like that. 
+
+Speaker 1 (04:33)
+You can still go with just the you see 313. They are having Max reaction. You can just go synchronous of Max refill, retrieve 5 and you keep on retrieving line 316. 
+
+Speaker 1 (04:51)
+You see, this retrieve count is less than Max, retrieve and you keep on doing the same operation 317 and 318 is the actual operation. They do it again. 
+
+Speaker 2 (05:05)
+Aha is 
+
+Speaker 1 (05:06)
+And if there is an issue on the try and on the try you see retrie counter plus plus is happening. The trick line 304. 
+
+Speaker 2 (05:20)
+Yes 
+
+Speaker 1 (05:21)
+At the same you need to apply for your create logic. Also in your try you'll have retry counter plus plus now if there is an issue then it will go to catch and it will again retrieve then if there is an issue because you are calling again from the catch block, then it will go to the tribe. Okay, look at my point. 
+
+Speaker 1 (05:39)
+It's just looking again and again. It's calling the same method again again for 5 times 
+
+Speaker 2 (05:46)
+Yeah 
+
+Speaker 1 (05:49)
+Right, so our in update logic, it's a lot. So I don't think you need to go with acing approach. Just the synchronous approach of having retrieve 5 times should suffice. 
+
+Speaker 2 (06:00)
+Ok. 
+
+Speaker 1 (06:04)
+Okay, give this a short tanus. Take too? Much of. 
+
+Speaker 1 (06:08)
+Complicated don't take too much of cursor same go to the bottom method and create first auto pull record same, logic you. Can use the trick? And in that Put the retry counter and in the catch go through the similar logic. 
+
+Speaker 1 (06:24)
+Max retrieve null Max, Put a Max, retrieve 5 and then Do the same operation, which is done on 3162319, and if there is Max, retrieve also Put a exception on the else. Don't need 319 and 320 everything other than that. You can still Implement that for the create first auto pull record. 
+
+Speaker 2 (06:49)
+Okay, since yeah, got 
+
+Speaker 1 (06:53)
+Okay. Yeah, okay. Give you a lot of shortcuts, give me posted. 
+
+Speaker 2 (06:56)
+Ki aashchary Thank you. That. Thank you. 
