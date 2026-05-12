@@ -1,0 +1,182 @@
+Speaker 1 (00:38)
+O city 900? 
+
+Speaker 2 (00:41)
+Ha. I kept the locks on the field custom validation exception. 
+
+Speaker 1 (00:51)
+That is where we need to. Get it and the outcome is where you need to understand what is actually happening. Right? 
+
+Speaker 1 (01:00)
+So information. In this case. Which is locked into the environment, and if you look into this case. 
+
+Speaker 1 (01:14)
+You're activated. Target and your case is out of sync. That's the problem. 
+
+Speaker 1 (01:38)
+Are you locked down to the environment? 
+
+Speaker 2 (01:40)
+Ha, yes, sudarth. 
+
+Speaker 1 (01:43)
+Can you check the case workflow status? ID and if you query the active with the target That's the problem. Give me the case. 
+
+Speaker 1 (01:59)
+ID for that. 
+
+Speaker 2 (02:05)
+Which they have mentioned 
+
+Speaker 1 (02:08)
+Yeah, but not the case number, let's sales was case. I think Activity task, get record, I'll be Including a couple of minutes, this and favourite food. The Current MIP. 
+
+Speaker 2 (02:55)
+Ah, I'm sharing it. Oh, I have settings. 
+
+Speaker 1 (03:12)
+So if you do the queries Essentially. What? Because the corrector might be 
+
+Speaker 2 (03:19)
+Medical 
+
+Speaker 1 (03:22)
+That is the work which controls the path. Okay, now let's look into what is there on the case? Ok. 
+
+Speaker 1 (03:46)
+A stat. What is that in the case? 
+
+Speaker 2 (03:51)
+Finalisation. 
+
+Speaker 1 (03:53)
+Now what is going to happen is your workflow status on the case is not matching the activity target current mip, which is medical review. 
+
+Speaker 2 (04:05)
+Oh, okay. Yeah. 
+
+Speaker 1 (04:07)
+Got it. Yeah, so what so you should understand from debugging perspective, there is two things, right? You should look at is it forward routing or backward routing? 
+
+Speaker 1 (04:20)
+Because then you can deeper, which controller to look at. Because when you are doing backward routine, you use, you call says or backwards routing controller. Okay, practice, a scenario where if we are going from finalisation to reveal 
+
+Speaker 2 (04:37)
+Ha, yes. 
+
+Speaker 1 (04:40)
+If something blow up right? Then the case still stayed at finished the activity task move to review. That is once scenario and the second scenario is forward routing. 
+
+Speaker 1 (04:52)
+So when moving from review to finalise But there is an exception happening on finalisation. 
+
+Speaker 2 (05:03)
+Ah, yes. 
+
+Speaker 1 (05:04)
+And what happened was the It is partially safe. That is the problem meaning, when I say partially saved the case was updated to finalisation. In theory, there should be a safe point Put in place in both forward and backward. 
+
+Speaker 1 (05:24)
+And whenever there is an exception, all of the corresponding values should have been rolled back. Meaning Activity target the or case update your tasks, update. Everything should have been rolled back. 
+
+Speaker 1 (05:43)
+Ok. Right? So the question is, what happened? 
+
+Speaker 1 (05:49)
+You need to figure out Don't start creating a Mars immediately. What is the field custom validation exception that you saw? 
+
+Speaker 2 (06:03)
+Annoy the mevin tool gave just a field custom meditation exception and a message which is showing in the UI 
+
+Speaker 1 (06:14)
+What is A You're saying this is the field customer exception. 
+
+Speaker 2 (06:22)
+Ha. The law guide it is like this like feed custom validation exception. You cannot close the milestone on the current case stage. 
+
+Speaker 1 (06:33)
+I know, but if you are missing the point, right? The point is, what blew up. Do a case copy and see if you're able to see the same exception. 
+
+Speaker 1 (06:55)
+That's a first step, ok? I'm i'm taking a different route based on the case. ID that you provided. 
+
+Speaker 2 (07:10)
+No Sidharth. 
+
+Speaker 1 (07:11)
+Make sure you raise your access for spot. Because it is very important. Look into the case, created daytime stamp. 
+
+Speaker 1 (07:26)
+511 ok? So we will probably look into Week to date, okay. I'm putting on K CD and do the search. 
+
+Speaker 1 (07:45)
+On hiriyanshu, I see you on college. Do we need to discuss immediately for the sprint demo? Anything? 
+
+Speaker 1 (07:51)
+Now my meeting got cancelled so I can continue. 
+
+Speaker 3 (07:57)
+Sorry I was on you speaking, so no, no, it is moved to Thursday, so it was democracy 4 to 5 times a morning light it was on offer. 
+
+Speaker 1 (08:13)
+This, if you look into Is flag? So keep this also in mind is large-scale. So this is also false, so we don't need to worry too much. 
+
+Speaker 1 (08:41)
+Something blow up and The question is, what Quiet credit blow up. But you understand right? 
+
+Speaker 2 (09:04)
+Probably, yes to the I mist here. 
+
+Speaker 1 (09:06)
+Your your immediate need is not to fix the code. You need to understand two things over here. Correct, no crucial things. 
+
+Speaker 1 (09:19)
+What is a scenario which is causing this blow up to happen with the move from degree to fertilisation understand that one use kids. Right? Second is why is the role bank not happening. 
+
+Speaker 1 (09:34)
+Properly, because on both forward and backward controller that should be saved points Put in place. So let's say there is an exception that exception needs to be thrown all the way to the top and the entire thing should have been ruled up. Ok, at least that was the logic in data set the new UI. 
+
+Speaker 1 (09:59)
+Is it? Is there a glitch? Is it not happening properly? 
+
+Speaker 1 (10:02)
+Have a look into that. Before you jump head into the court. See, cursor yes, it will suggest because it will just look into conflict in interaction points and multiple interaction. 
+
+Speaker 1 (10:19)
+Don't think too much from that perspective. The root cause is your activity. Target is in medical review and your case is in futization. 
+
+Speaker 1 (10:29)
+So since there is a mismatch, it will not allow you to progress through the tasks. Because you are not part of the medical group. The problem right? 
+
+Speaker 1 (10:41)
+So the question is, where That did it break the sink break? So being from the perspective, and go through that 
+
+Speaker 2 (10:53)
+Okay, okay, see that. 
+
+Speaker 1 (10:56)
+Let me know if you need help dinosh. Okay, I can set video with a debugging session and I can probably guide you. 
+
+Speaker 2 (11:02)
+Ok, Kashi. 
+
+Speaker 1 (11:04)
+Give me a bitter shot if you're still having difficulties we can connect later. Yeah, sure. Oh, anything irresonate Tamil. 
+
+Speaker 2 (11:15)
+Another bug is there? That's also A city 9 itself. 
+
+Speaker 1 (11:22)
+What is do you want any insight on that or you are good or what is the 
+
+Speaker 2 (11:28)
+This is all this also like we reproduce only in this city 9. 
+
+Speaker 1 (11:34)
+What's the building? 
+
+Speaker 2 (11:36)
+Are 2465. 
+
+Speaker 1 (11:57)
+Business name is showing extra details opened and tip lay license evaluation. 
