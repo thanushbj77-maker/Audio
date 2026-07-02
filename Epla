@@ -1,0 +1,92 @@
+Speaker 1 (00:01)
+Eb lay records are always Created music. 
+
+Speaker 2 (00:08)
+Ah, yes, Siri. 
+
+Speaker 1 (00:11)
+No, for any XYZ reason. Battery record creation fails What we do is on the old duy. Whenever the user comes on an open circuit We fire an event to create the missing gipalia, records. 
+
+Speaker 1 (00:34)
+Okay. Now project team that they have a customization, which they have requested. What they did was they are firing their automation. 
+
+Speaker 1 (00:48)
+Based on a record, a task record, so there are creating a custom task record. And when they check that box, they use their triggers to fire an automation. 
+
+Speaker 2 (01:03)
+Okay. 
+
+Speaker 1 (01:03)
+You don't need to be concerned about that, potentially giving you context. 
+
+Speaker 2 (01:07)
+Haha, no. 
+
+Speaker 1 (01:09)
+What's the happening is in the new UI you remember, we introduced a product filter a drop down. Haha. 
+
+Speaker 2 (01:20)
+Yes 
+
+Speaker 1 (01:21)
+And we only display the records corresponding to that particular product, you are aware of that 
+
+Speaker 2 (01:27)
+Yes 
+
+Speaker 1 (01:29)
+The problem with this is, uh, it only creates the epla records specific to that particular product. The fails is working only for so now the use case is, let's say epiledition failed. Okay, the fail-safe that we Put in place only works. 
+
+Speaker 1 (01:51)
+When the user needs to go and click on every single product from the dropdop, then only that fetch PL record is done. The facil APL records will assess if there is missing, and then it creates Ok. From the old we never had this product dropped down list, and it loads the entire EPA, so at that time, whatever is failing, we immediately created. 
+
+Speaker 2 (02:19)
+Haha, okay. 
+
+Speaker 1 (02:23)
+Get what I'm trying to say. 
+
+Speaker 2 (02:25)
+Yes, here only if we select the particular product, then only it will loads the failed EPA. Yes, otherwise it won't load the kaafa Ali. PIP. 
+
+Speaker 1 (02:35)
+Ah, otherwise it never loads. 
+
+Speaker 2 (02:38)
+Oh, okay. 
+
+Speaker 1 (02:40)
+So two things. Yes, I am convincing for now. Because Japan team anyways needs to go through every EPA, so this step work, so but I cannot keep this app and running for a long time. 
+
+Speaker 1 (02:54)
+We need to resolve this issue. 
+
+Speaker 2 (02:57)
+Ok. 
+
+Speaker 1 (02:58)
+Okay, so either I want you to address the root cause of the problem, because I think other developers have tried before you 
+
+Speaker 2 (03:09)
+Do 
+
+Speaker 1 (03:10)
+To completely eliminate the failure of eplay records on the first place itself for Japan. Either resolve the root cause of the problem, or make sure that the fail-safe applies to all. EBay records are not specifically for product. 
+
+Speaker 2 (03:33)
+Okay. 
+
+Speaker 1 (03:34)
+I would rather you try to fix the RC. A properly. And see if you're able to on record creation of Japan COY order, we need to make sure the eplords are created physical on the gate cope rather than rely on the page set. 
+
+Speaker 1 (03:57)
+Ok. I would rather fix it the right way. See if you're able to take a stab at this. 
+
+Speaker 1 (04:03)
+After you take those 2, this is a critical ticket I've already assigned that. This refresh. And this tough weights, this will be very disastrous, so a little bit careful on this, always, you know, test it often. 
+
+Speaker 2 (04:25)
+Okay, see that. Okay, okay. 
+
+Speaker 1 (04:30)
+Sanjot, let's discuss about the browser issues that Manoj is breaking up. 
